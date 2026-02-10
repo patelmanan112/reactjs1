@@ -1,0 +1,33 @@
+.navbar{
+  display: flex;
+
+ justify-content: space-between;
+ align-items: center;
+ background-color: rgb(216, 255, 183);
+ padding: 7px 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .link{
+    display: none;
+  }
+  .menubar{
+    display: flex;
+    cursor: pointer;
+  }
+  .link{
+    width: 70px;
+    border: 2px solid black;
+  }
+  .navbar:has(.menubar:hover) .link{
+    display: flex;
+    position: absolute;
+    top: 50px;
+    flex-direction: column;
+    right: 10px;
+  }
+ .logo  h1{
+  color: rgb(121, 49, 215);
+  font-size: 27px;
+  }
+}
