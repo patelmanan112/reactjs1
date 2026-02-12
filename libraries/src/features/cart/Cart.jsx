@@ -28,10 +28,10 @@ import { useState } from 'react'
       <input type="text" placeholder='enter number' onChange={(e)=>{setNumber1(e.target.value)}}/> <br/> <br/>
       <button onClick={addAll}>submit</button>
 
- <p>{fullname}</p>
-<p>{lastname}</p>
-<p>{age12}</p>
-<p>{number12}</p>
+ <p>Full Name: {fullname}</p>
+<p>Last Name: {lastname}</p>
+<p>Age: {age12}</p>
+<p>Mobile Number: {number12}</p>
 
     </div>
   )
