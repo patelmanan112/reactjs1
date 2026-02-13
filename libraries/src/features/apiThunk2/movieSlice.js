@@ -2,7 +2,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
 export const movieUser = createAsyncThunk(
-  'food/movieUser',
+  'movie/movieUser',
   async () => {
     const response = await fetch('https://imdb.iamidiotareyoutoo.com/search?q=Spiderman');
     return response.json(); // Returns data to fulfilled action
