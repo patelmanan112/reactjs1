@@ -1,0 +1,22 @@
+.countVar{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    padding: 20px;
+}
+.btn{
+    width: 10%;
+    height: 26px;
+    font-size: 18px;
+    background-color: rgb(179, 166, 255);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.contain{
+    display: flex;
+    flex-direction: column;
+    
+}
+.btn:hover{
+    transform: scale(1.05);
+}

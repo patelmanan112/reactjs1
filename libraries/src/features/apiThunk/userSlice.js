@@ -19,11 +19,12 @@ const usersSlice = createSlice({
     builder
       .addCase(fetchUsers.pending, (state) => {
         state.loading = true;
-        // state.error = null;
+        state.error = null;
       })
       .addCase(fetchUsers.fulfilled, (state, action) => {
         state.loading = false;
         state.data = action.payload; // Data from API
+        console.log(state.data)
       })
       .addCase(fetchUsers.rejected, (state, action) => {
         state.loading = false;

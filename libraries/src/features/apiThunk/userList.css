@@ -1,0 +1,7 @@
+.contain{
+    display: flex;
+    gap: 40px;
+}
+.main{
+    width: 170px;
+}
