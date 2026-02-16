@@ -6,6 +6,17 @@ export const movieUser = createAsyncThunk(
   async () => {
     const response = await fetch('https://imdb.iamidiotareyoutoo.com/search?q=Spiderman');
     return response.json(); // Returns data to fulfilled action
+  },
+
+    {
+    condition: (_, { getState }) => {
+      const { movie } = getState();
+      if (movie.data?.length > 0 || movie.loading) {  // Add || users.loading
+        console.log(' Already loading/data exists, skipping');
+        return false;
+      }
+      return true;
+    }
   }
 );
 
