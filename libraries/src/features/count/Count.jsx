@@ -6,7 +6,7 @@ import './Count.css'
   const count1 = useSelector((state) => state.count.value1)
   const count2 = useSelector((state) => state.count.value2)
   const dispatch = useDispatch()
-
+                  
   return (
     <div>
       <div className='contain'>
@@ -16,8 +16,8 @@ import './Count.css'
           onClick={() => dispatch(increment())}
           className='btn'
         >
-          Increment
-        </button> <br />
+    Increment
+              </button> <br />
 
          <span className='countVar'>Count: {count2}</span>
         <button

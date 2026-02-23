@@ -27,20 +27,7 @@ const[str , setStr] = useState("");
   return (
     <>
 
-    <input type="text" onChange={(e)=>{setStr(e.target.value)}} />
-    <button onClick={()=>{
-task()
-    }}>Search for</button>
-
-  <div>
-    {data.map((element)=>(
-      
-    <div className={element.username}>
-      <p>first name : {element.name.firstname}  last name : {element.name.lastname}</p>
-        <p>{element.email}</p>
-    </div>
-    ))}
-  </div>
+   
     </>
   )
 }

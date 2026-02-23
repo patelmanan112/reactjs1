@@ -1,5 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit';
-import { usersApi } from './usersApi';
+import { usersApi } from '../RTKQuery/UserRTKquery.jsx';
 
 export const store = configureStore({
   reducer: {

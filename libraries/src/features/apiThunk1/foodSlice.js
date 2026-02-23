@@ -11,6 +11,16 @@ export const foodUser = createAsyncThunk(
 console.log(foodUser);
 
 
+ {
+    condition: (_, { getState }) => {
+      const { food } = getState();
+      if (food.data1?.length > 0 || food.loading) {  // Add || users.loading
+        console.log(' Already loading/data exists, skipping');
+        return false;
+      }
+      return true;
+    }}
+
 const foodSlice = createSlice({
   name: 'food',
   initialState: { data1: [], loading: false, error: null },
