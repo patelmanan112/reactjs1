@@ -9,13 +9,13 @@ const CommentsList = () => {
 
   return (
     
-      <div style={{display : "flex", gap:"10px"}}>
+      <div style={{display : "flex", gap:"20px", flexWrap : "wrap"}}>
         {users.map(user => (
-      <div>
-         <p>{user.name}</p>
-         <p>{user.username}</p>
-         <p>{user.email}</p>
-         <p>{user.address.city}</p>
+      <div style={{backgroundColor : "grey", height : "210px" , width: "250px" , padding : "10px" , fontSize : "18px" , fontFamily:"system-ui"}}>
+         <p> Name : {user.name}</p>
+         <p>Username : {user.username}</p>
+         <p> Email: {user.email}</p>
+         <p> City : {user.address.city}</p>
       </div>
       ))}
       </div>
