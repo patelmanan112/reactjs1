@@ -1,18 +1,29 @@
 import React from 'react';
 import { useGetUsersQuery } from './UserRTKquery';
+import { useState } from 'react';
+import { useRef } from 'react';
+import Child from './Child';
 
 const UsersList = () => {
-  const { data: users = [], error, isLoading } = useGetUsersQuery();
+  const[id , setId] = useState(0);
+const ref = useRef();
 
-  if (isLoading) return <p>Loading...</p>;
-  if (error) return <p>Error loading users!</p>;
 
-  return (
-    <ul>
-      {users.map(user => (
-        <li key={user.id}>{user.name}</li>
-      ))}
-    </ul>
+  const { data: users = [], error, isLoading } = useGetUsersQuery(id);
+
+  function callFun(){
+    setId(ref.current.value)
+  }
+  return (<>
+  
+  <input type="text" ref={ref} />
+  <button onClick={()=>{callFun()}}>Click me</button>
+
+
+<Child data ={users} loading ={isLoading} error={error}/>
+ 
+  </>
+    
   );
 };
 
