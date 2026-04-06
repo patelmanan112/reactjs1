@@ -1,18 +1,14 @@
 import React from 'react'
-import { useState , useEffect } from 'react'
+import { useContext } from 'react'
+import { context } from '../App'
 export default function Cors() {
-    const[data , setData] = useState([]);
-   async function click(){
-    const res = await fetch("http://localhost:3000/");
-    // http://localhost:3000/users
-    const data = await res.json();
-    setData(data);
-    console.log(data , "Fetch");
-    
-   }
+  const {data , setData} = useContext(context)
   return (
     <div>
-      <button onClick={()=>{click()}}>click me</button>
+      <h1>{data.name}</h1>
+      <h1>{data.age}</h1>
+      <h1>{data.roll}</h1>
+      <h1>{data.dob}</h1>
     </div>
   )
 }
